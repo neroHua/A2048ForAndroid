@@ -27,13 +27,13 @@
 
     </LinearLayout>
 
-    <GridLayout
+    <nero.hua.a2048forandroid.GameView
         android:id="@+id/GameView"
         android:layout_width="fill_parent"
         android:layout_height="@0dp"
         android:layout_weight="1"
     >
 
-    </GridLayout>
+    </nero.hua.a2048forandroid.GameView>
 
-  </LinearLayout>
+</LinearLayout>
