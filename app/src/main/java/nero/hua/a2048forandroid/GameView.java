@@ -40,17 +40,21 @@ public class GameView extends GridLayout {
                     if (Math.abs(offsetX) >= Math.abs(offsetY)) {
                         if (offsetX < -5) {
                             System.out.println("left");
+                            onLeft();
                         }
                         else if (offsetX > 5) {
                             System.out.println("right");
+                            onRight();
                         }
                     }
                     else {
                         if (offsetY < -5) {
-                            System.out.println("left");
+                            System.out.println("up");
+                            onUp();
                         }
                         else if (offsetY > 5) {
-                            System.out.println("right");
+                            System.out.println("down");
+                            onDown();
                         }
                     }
                 }
@@ -58,6 +62,16 @@ public class GameView extends GridLayout {
             }
 
         });
+    }
+
+
+    private void onLeft() {
+    }
+    private void onRight() {
+    }
+    private void onUp() {
+    }
+    private void onDown() {
     }
 
 }
