@@ -1,6 +1,8 @@
 package nero.hua.a2048forandroid;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Point;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
@@ -18,6 +20,8 @@ public class GameView extends GridLayout {
     private static double PROBABILITY_FOR_2 = 0.9;
     private static int RANDOM_2 = 2;
     private static int RANDOM_4 = 4;
+
+    private int score = 0;
 
     private Card[][] cardArray = new Card[CARD_COUNT][CARD_COUNT];
     private List<Point> pointList = new ArrayList<>();
@@ -119,6 +123,8 @@ public class GameView extends GridLayout {
                 cardArray[i][j].setNumber(0);
             }
         }
+
+        this.score = 0;
     }
 
     public void addRandomNumber() {
@@ -153,6 +159,7 @@ public class GameView extends GridLayout {
                 } else if (cardArray[i][j].equals(cardArray[i][j + 1])) {
                     cardArray[i][j + 1].setNumberAndLabel(cardArray[i][j].getNumber() + cardArray[i][j + 1].getNumber());
                     cardArray[i][j].setNumberAndLabel(0);
+                    score += cardArray[i][j + 1].getNumber();
 
                     int m = j - 1;
                     while (m > 0 && cardArray[i][m - 1].isNotEmpty()) {
@@ -189,6 +196,7 @@ public class GameView extends GridLayout {
                 } else if (cardArray[i][j].equals(cardArray[i][j - 1])) {
                     cardArray[i][j - 1].setNumberAndLabel(cardArray[i][j].getNumber() + cardArray[i][j - 1].getNumber());
                     cardArray[i][j].setNumberAndLabel(0);
+                    score += cardArray[i][j - 1].getNumber();
 
                     int m = j + 1;
                     while (m < CARD_COUNT - 1 && cardArray[i][m + 1].isNotEmpty()) {
@@ -225,6 +233,7 @@ public class GameView extends GridLayout {
                 } else if (cardArray[j][i].equals(cardArray[j - 1][i])) {
                     cardArray[j - 1][i].setNumberAndLabel(cardArray[j][i].getNumber() + cardArray[j - 1][i].getNumber());
                     cardArray[j][i].setNumberAndLabel(0);
+                    score += cardArray[j - 1][i].getNumber();
 
                     int m = j + 1;
                     while (m < CARD_COUNT - 1 && cardArray[m + 1][i].isNotEmpty()) {
@@ -261,6 +270,7 @@ public class GameView extends GridLayout {
                 } else if (cardArray[j][i].equals(cardArray[j + 1][i])) {
                     cardArray[j + 1][i].setNumberAndLabel(cardArray[j][i].getNumber() + cardArray[j + 1][i].getNumber());
                     cardArray[j][i].setNumberAndLabel(0);
+                    score += cardArray[j + 1][i].getNumber();
 
                     int m = j - 1;
                     while (m > 0 && cardArray[m - 1][i].isNotEmpty()) {
@@ -278,7 +288,42 @@ public class GameView extends GridLayout {
 
         if (moved) {
             addRandomNumber();
+            if (checkComplete()) {
+                new AlertDialog.Builder(getContext())
+                        .setTitle("你好")
+                        .setMessage("游戏结束")
+                        .setPositiveButton("重新开始游戏", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                startGame();
+                            }
+                        })
+                        .show();
+            }
         }
+    }
+
+    private boolean checkComplete() {
+        for (int i = 0; i < CARD_COUNT; i++) {
+            for (int j = 0; j < CARD_COUNT; j++) {
+                if (cardArray[i][j].isEmpty()) {
+                    return true;
+                }
+            }
+        }
+
+        for (int i = 0; i < CARD_COUNT - 1; i++) {
+            for (int j = 0; j < CARD_COUNT - 1; j++) {
+                if (cardArray[i][j].equals(cardArray[i + 1][j])) {
+                    return true;
+                }
+                if (cardArray[i][j].equals(cardArray[i][j + 1])) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
 }
