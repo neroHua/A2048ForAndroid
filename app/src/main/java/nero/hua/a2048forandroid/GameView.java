@@ -7,7 +7,9 @@ import android.graphics.Point;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.GridLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,10 +44,11 @@ public class GameView extends GridLayout {
     }
 
     private void initGameView() {
+        setBackgroundColor(0xFFBBADA0);
         setColumnCount(CARD_COUNT);
 
-        setBackgroundColor(0xFFBBADA0);
-
+        addCard(300);
+        startGame();
         setOnTouchListener(new OnTouchListener() {
 
             private float startX, startY, offsetX, offsetY;
@@ -56,9 +59,9 @@ public class GameView extends GridLayout {
                     startX = motionEvent.getX();
                     startY = motionEvent.getY();
                 }
-                else if (MotionEvent.ACTION_DOWN == motionEvent.getAction()) {
-                    offsetX = motionEvent.getX() - offsetX;
-                    offsetY = motionEvent.getY() - offsetY;
+                else if (MotionEvent.ACTION_UP == motionEvent.getAction()) {
+                    offsetX = motionEvent.getX() - startX;
+                    offsetY = motionEvent.getY() - startY;
 
                     if (Math.abs(offsetX) >= Math.abs(offsetY)) {
                         if (offsetX < -5) {
@@ -87,17 +90,6 @@ public class GameView extends GridLayout {
         });
     }
 
-    @Override
-    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-        super.onSizeChanged(w, h, oldw, oldh);
-
-        int cardWidth = (Math.min(h, w) - CARD_GAP) / CARD_COUNT;
-
-        addCard(cardWidth);
-
-        startGame();
-    }
-
     private void addCard(int cardWidth) {
         for (int i = 0; i < CARD_COUNT; i++) {
             for (int j = 0; j < CARD_COUNT; j++) {
@@ -120,7 +112,7 @@ public class GameView extends GridLayout {
     public void cleanGame() {
         for (int i = 0; i < CARD_COUNT; i++) {
             for (int j = 0; j < CARD_COUNT; j++) {
-                cardArray[i][j].setNumber(0);
+                cardArray[i][j].setNumberAndLabel(0);
             }
         }
 
