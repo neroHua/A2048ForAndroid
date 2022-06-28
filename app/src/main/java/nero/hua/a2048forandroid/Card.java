@@ -15,6 +15,11 @@ public class Card extends FrameLayout {
 
     private TextView label;
 
+    public Card() {
+        super(null);
+        this.number = 0;
+    }
+
     public Card(@NonNull Context context) {
         super(context);
 
@@ -47,6 +52,10 @@ public class Card extends FrameLayout {
 
     public void setNumberAndLabel(int number) {
         this.number = number;
+
+        if (null == label) {
+            return;
+        }
 
         if (number > 0) {
             label.setText(number + "");
