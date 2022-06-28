@@ -278,16 +278,16 @@ public class GameDataAndLogicTest {
         gameDataAndLogic.cleanGame();
 
         gameDataAndLogic.cardArray[0][0].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][1].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][2].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][3].setNumberAndLabel(2);
+        gameDataAndLogic.cardArray[1][0].setNumberAndLabel(2);
+        gameDataAndLogic.cardArray[2][0].setNumberAndLabel(2);
+        gameDataAndLogic.cardArray[3][0].setNumberAndLabel(2);
 
         gameDataAndLogic.up();
 
         Assert.assertEquals(4, gameDataAndLogic.cardArray[0][0].getNumber());
-        Assert.assertEquals(4, gameDataAndLogic.cardArray[0][1].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][2].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][3].getNumber());
+        Assert.assertEquals(4, gameDataAndLogic.cardArray[1][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[2][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[3][0].getNumber());
     }
 
     @Test
@@ -297,16 +297,16 @@ public class GameDataAndLogicTest {
         gameDataAndLogic.cleanGame();
 
         gameDataAndLogic.cardArray[0][0].setNumberAndLabel(0);
-        gameDataAndLogic.cardArray[0][1].setNumberAndLabel(0);
-        gameDataAndLogic.cardArray[0][2].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][3].setNumberAndLabel(2);
+        gameDataAndLogic.cardArray[1][0].setNumberAndLabel(0);
+        gameDataAndLogic.cardArray[2][0].setNumberAndLabel(2);
+        gameDataAndLogic.cardArray[3][0].setNumberAndLabel(2);
 
         gameDataAndLogic.up();
 
         Assert.assertEquals(4, gameDataAndLogic.cardArray[0][0].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][1].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][2].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][3].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[1][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[2][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[3][0].getNumber());
     }
 
     @Test
@@ -316,16 +316,16 @@ public class GameDataAndLogicTest {
         gameDataAndLogic.cleanGame();
 
         gameDataAndLogic.cardArray[0][0].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][1].setNumberAndLabel(0);
-        gameDataAndLogic.cardArray[0][2].setNumberAndLabel(0);
-        gameDataAndLogic.cardArray[0][3].setNumberAndLabel(2);
+        gameDataAndLogic.cardArray[1][0].setNumberAndLabel(0);
+        gameDataAndLogic.cardArray[2][0].setNumberAndLabel(0);
+        gameDataAndLogic.cardArray[3][0].setNumberAndLabel(2);
 
         gameDataAndLogic.up();
 
         Assert.assertEquals(4, gameDataAndLogic.cardArray[0][0].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][1].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][2].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][3].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[1][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[2][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[3][0].getNumber());
     }
 
     @Test
@@ -335,16 +335,16 @@ public class GameDataAndLogicTest {
         gameDataAndLogic.cleanGame();
 
         gameDataAndLogic.cardArray[0][0].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][1].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][2].setNumberAndLabel(0);
-        gameDataAndLogic.cardArray[0][3].setNumberAndLabel(0);
+        gameDataAndLogic.cardArray[1][0].setNumberAndLabel(2);
+        gameDataAndLogic.cardArray[2][0].setNumberAndLabel(0);
+        gameDataAndLogic.cardArray[3][0].setNumberAndLabel(0);
 
         gameDataAndLogic.up();
 
         Assert.assertEquals(4, gameDataAndLogic.cardArray[0][0].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][1].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][2].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][3].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[1][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[2][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[3][0].getNumber());
     }
 
     @Test
@@ -354,16 +354,16 @@ public class GameDataAndLogicTest {
         gameDataAndLogic.cleanGame();
 
         gameDataAndLogic.cardArray[0][0].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][1].setNumberAndLabel(0);
-        gameDataAndLogic.cardArray[0][2].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][3].setNumberAndLabel(0);
+        gameDataAndLogic.cardArray[1][0].setNumberAndLabel(0);
+        gameDataAndLogic.cardArray[2][0].setNumberAndLabel(2);
+        gameDataAndLogic.cardArray[3][0].setNumberAndLabel(0);
 
         gameDataAndLogic.up();
 
         Assert.assertEquals(4, gameDataAndLogic.cardArray[0][0].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][1].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][2].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][3].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[1][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[2][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[3][0].getNumber());
     }
 
     @Test
@@ -373,16 +373,16 @@ public class GameDataAndLogicTest {
         gameDataAndLogic.cleanGame();
 
         gameDataAndLogic.cardArray[0][0].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][1].setNumberAndLabel(0);
-        gameDataAndLogic.cardArray[0][2].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][3].setNumberAndLabel(2);
+        gameDataAndLogic.cardArray[1][0].setNumberAndLabel(0);
+        gameDataAndLogic.cardArray[2][0].setNumberAndLabel(2);
+        gameDataAndLogic.cardArray[3][0].setNumberAndLabel(2);
 
         gameDataAndLogic.up();
 
         Assert.assertEquals(4, gameDataAndLogic.cardArray[0][0].getNumber());
-        Assert.assertEquals(2, gameDataAndLogic.cardArray[0][1].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][2].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][3].getNumber());
+        Assert.assertEquals(2, gameDataAndLogic.cardArray[1][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[2][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[3][0].getNumber());
     }
 
     @Test
@@ -392,16 +392,16 @@ public class GameDataAndLogicTest {
         gameDataAndLogic.cleanGame();
 
         gameDataAndLogic.cardArray[0][0].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][1].setNumberAndLabel(0);
-        gameDataAndLogic.cardArray[0][2].setNumberAndLabel(0);
-        gameDataAndLogic.cardArray[0][3].setNumberAndLabel(0);
+        gameDataAndLogic.cardArray[1][0].setNumberAndLabel(0);
+        gameDataAndLogic.cardArray[2][0].setNumberAndLabel(0);
+        gameDataAndLogic.cardArray[3][0].setNumberAndLabel(0);
 
         gameDataAndLogic.up();
 
         Assert.assertEquals(2, gameDataAndLogic.cardArray[0][0].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][1].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][2].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][3].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[1][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[2][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[3][0].getNumber());
     }
 
     @Test
@@ -411,16 +411,16 @@ public class GameDataAndLogicTest {
         gameDataAndLogic.cleanGame();
 
         gameDataAndLogic.cardArray[0][0].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][1].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][2].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][3].setNumberAndLabel(2);
+        gameDataAndLogic.cardArray[1][0].setNumberAndLabel(2);
+        gameDataAndLogic.cardArray[2][0].setNumberAndLabel(2);
+        gameDataAndLogic.cardArray[3][0].setNumberAndLabel(2);
 
         gameDataAndLogic.down();
 
-        Assert.assertEquals(4, gameDataAndLogic.cardArray[0][0].getNumber());
-        Assert.assertEquals(4, gameDataAndLogic.cardArray[0][1].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][2].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][3].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[1][0].getNumber());
+        Assert.assertEquals(4, gameDataAndLogic.cardArray[2][0].getNumber());
+        Assert.assertEquals(4, gameDataAndLogic.cardArray[3][0].getNumber());
     }
 
     @Test
@@ -430,16 +430,16 @@ public class GameDataAndLogicTest {
         gameDataAndLogic.cleanGame();
 
         gameDataAndLogic.cardArray[0][0].setNumberAndLabel(0);
-        gameDataAndLogic.cardArray[0][1].setNumberAndLabel(0);
-        gameDataAndLogic.cardArray[0][2].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][3].setNumberAndLabel(2);
+        gameDataAndLogic.cardArray[1][0].setNumberAndLabel(0);
+        gameDataAndLogic.cardArray[2][0].setNumberAndLabel(2);
+        gameDataAndLogic.cardArray[3][0].setNumberAndLabel(2);
 
         gameDataAndLogic.down();
 
-        Assert.assertEquals(4, gameDataAndLogic.cardArray[0][0].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][1].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][2].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][3].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[1][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[2][0].getNumber());
+        Assert.assertEquals(4, gameDataAndLogic.cardArray[3][0].getNumber());
     }
 
     @Test
@@ -449,16 +449,16 @@ public class GameDataAndLogicTest {
         gameDataAndLogic.cleanGame();
 
         gameDataAndLogic.cardArray[0][0].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][1].setNumberAndLabel(0);
-        gameDataAndLogic.cardArray[0][2].setNumberAndLabel(0);
-        gameDataAndLogic.cardArray[0][3].setNumberAndLabel(2);
+        gameDataAndLogic.cardArray[1][0].setNumberAndLabel(0);
+        gameDataAndLogic.cardArray[2][0].setNumberAndLabel(0);
+        gameDataAndLogic.cardArray[3][0].setNumberAndLabel(2);
 
         gameDataAndLogic.down();
 
-        Assert.assertEquals(4, gameDataAndLogic.cardArray[0][0].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][1].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][2].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][3].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[1][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[2][0].getNumber());
+        Assert.assertEquals(4, gameDataAndLogic.cardArray[3][0].getNumber());
     }
 
     @Test
@@ -468,16 +468,16 @@ public class GameDataAndLogicTest {
         gameDataAndLogic.cleanGame();
 
         gameDataAndLogic.cardArray[0][0].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][1].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][2].setNumberAndLabel(0);
-        gameDataAndLogic.cardArray[0][3].setNumberAndLabel(0);
+        gameDataAndLogic.cardArray[1][0].setNumberAndLabel(2);
+        gameDataAndLogic.cardArray[2][0].setNumberAndLabel(0);
+        gameDataAndLogic.cardArray[3][0].setNumberAndLabel(0);
 
         gameDataAndLogic.down();
 
-        Assert.assertEquals(4, gameDataAndLogic.cardArray[0][0].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][1].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][2].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][3].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[1][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[2][0].getNumber());
+        Assert.assertEquals(4, gameDataAndLogic.cardArray[3][0].getNumber());
     }
 
     @Test
@@ -487,16 +487,16 @@ public class GameDataAndLogicTest {
         gameDataAndLogic.cleanGame();
 
         gameDataAndLogic.cardArray[0][0].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][1].setNumberAndLabel(0);
-        gameDataAndLogic.cardArray[0][2].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][3].setNumberAndLabel(0);
+        gameDataAndLogic.cardArray[1][0].setNumberAndLabel(0);
+        gameDataAndLogic.cardArray[2][0].setNumberAndLabel(2);
+        gameDataAndLogic.cardArray[3][0].setNumberAndLabel(0);
 
         gameDataAndLogic.down();
 
-        Assert.assertEquals(4, gameDataAndLogic.cardArray[0][0].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][1].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][2].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][3].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[1][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[2][0].getNumber());
+        Assert.assertEquals(4, gameDataAndLogic.cardArray[3][0].getNumber());
     }
 
     @Test
@@ -506,16 +506,16 @@ public class GameDataAndLogicTest {
         gameDataAndLogic.cleanGame();
 
         gameDataAndLogic.cardArray[0][0].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][1].setNumberAndLabel(0);
-        gameDataAndLogic.cardArray[0][2].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][3].setNumberAndLabel(2);
+        gameDataAndLogic.cardArray[1][0].setNumberAndLabel(0);
+        gameDataAndLogic.cardArray[2][0].setNumberAndLabel(2);
+        gameDataAndLogic.cardArray[3][0].setNumberAndLabel(2);
 
         gameDataAndLogic.down();
 
-        Assert.assertEquals(4, gameDataAndLogic.cardArray[0][0].getNumber());
-        Assert.assertEquals(2, gameDataAndLogic.cardArray[0][1].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][2].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][3].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[1][0].getNumber());
+        Assert.assertEquals(2, gameDataAndLogic.cardArray[2][0].getNumber());
+        Assert.assertEquals(4, gameDataAndLogic.cardArray[3][0].getNumber());
     }
 
     @Test
@@ -525,16 +525,16 @@ public class GameDataAndLogicTest {
         gameDataAndLogic.cleanGame();
 
         gameDataAndLogic.cardArray[0][0].setNumberAndLabel(2);
-        gameDataAndLogic.cardArray[0][1].setNumberAndLabel(0);
-        gameDataAndLogic.cardArray[0][2].setNumberAndLabel(0);
-        gameDataAndLogic.cardArray[0][3].setNumberAndLabel(0);
+        gameDataAndLogic.cardArray[1][0].setNumberAndLabel(0);
+        gameDataAndLogic.cardArray[2][0].setNumberAndLabel(0);
+        gameDataAndLogic.cardArray[3][0].setNumberAndLabel(0);
 
         gameDataAndLogic.down();
 
-        Assert.assertEquals(2, gameDataAndLogic.cardArray[0][0].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][1].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][2].getNumber());
-        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][3].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[0][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[1][0].getNumber());
+        Assert.assertEquals(0, gameDataAndLogic.cardArray[2][0].getNumber());
+        Assert.assertEquals(2, gameDataAndLogic.cardArray[3][0].getNumber());
     }
 
     @Test
