@@ -65,7 +65,7 @@ public class GameDataAndLogic {
 
         Point point = pointList.get((int) (Math.random() * pointList.size()));
 
-        cardArray[point.x][point.y].setNumberAndLabel(Math.random() >= GameConfig.PROBABILITY_FOR_2 ? GameConfig.RANDOM_2 : GameConfig.RANDOM_4);
+        cardArray[point.x][point.y].setNumberAndLabel(Math.random() >= GameConfig.PROBABILITY_FOR_2 ? GameConfig.RANDOM_4 : GameConfig.RANDOM_2);
     }
 
     public void onRight() {
@@ -258,6 +258,17 @@ public class GameDataAndLogic {
                 if (cardArray[i][j].equals(cardArray[i][j + 1])) {
                     return false;
                 }
+            }
+        }
+
+        for (int i = 0; i < GameConfig.CARD_COUNT - 1; i++) {
+            if (cardArray[i][GameConfig.CARD_COUNT - 1].equals(cardArray[i + 1][GameConfig.CARD_COUNT - 1])) {
+                return false;
+            }
+        }
+        for (int i = 0; i < GameConfig.CARD_COUNT - 1; i++) {
+            if (cardArray[GameConfig.CARD_COUNT - 1][i].equals(cardArray[GameConfig.CARD_COUNT - 1][i + 1])) {
+                return false;
             }
         }
 
